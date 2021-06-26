@@ -56,7 +56,7 @@ def create_figure(pos,neg):
     fig = Figure(facecolor=(0.2,0.2,0.2))
     axis = fig.add_subplot(1, 1, 1)
     axis.set_facecolor((0.2,0.2,0.2))
-    axis.bar(["Probability: rated well", "Probability: rated Badly"],
+    axis.bar(["Probability: rated badly", "Probability: rated well"],
     [pos, neg], width=0.5, color=(0.5,0,0))
     return fig
 
