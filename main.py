@@ -37,7 +37,7 @@ def analyze_wine():
         return render_template('AnalyzeWine.html')
 @app.route('/results/<float:prob_yes>/<float:prob_no>')
 def results(prob_yes,prob_no):
-    return 'workiing on it'
+    return 'working on it'
 
 if __name__ == '__main__':
     app.run()
