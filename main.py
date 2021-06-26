@@ -12,6 +12,8 @@ app = Flask(__name__)
 pickle_in = open("RfClassifier.pk1", 'rb')
 rf_classifier = pickle.load(pickle_in)
 
+pickle_scaler = open("scaler.pk1", 'rb')
+scaler = pickle.load(pickle_scaler)
 
 @app.route('/')
 @app.route('/home')
@@ -35,6 +37,7 @@ def analyze_wine():
         vec =  np.array([fixed_acidity, volatile_acidity, citric_acid, residual_sugar,
                          chlorides, free_sulfur_dioxide, total_sulfur_dioxide, ph, sulphates,
                          alcohol]).reshape(-1,10)
+        vec = scaler.transform(vec)
         result = rf_classifier.predict_proba(vec)
         return redirect(url_for("results", prob_yes=result[0][0], prob_no=result[0][1]))
     else:
