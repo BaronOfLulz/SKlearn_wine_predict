@@ -19,8 +19,8 @@ The model that preformed best was Random Forest with an 89% accuracy
 
 # Utilizing the model
 
-After the best model was found and trained, a flask web app was built which analyzes new wine examples using the random forest model and returns
-the probabilty that the wine is good.
+After the best model was found and trained, a flask web app was built which predicts the quality of
+new wines using the random forest model and returns the probabilty that a given wine is one of quality. 
 
 ![Entering the details of a wine in web app](Readimages/2.jpg)
 
