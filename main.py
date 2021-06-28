@@ -70,7 +70,7 @@ def results(prob_yes, prob_no):
 
 @app.route('/howItWorks')
 def how_it_works():
-    return "under construction"
+    return render_template("HowItWorks.html")
 
 
 if __name__ == '__main__':
