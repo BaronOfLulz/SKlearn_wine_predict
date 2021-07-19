@@ -8,7 +8,8 @@ We set out to build a classification model that would classify the wine by good 
 
 1. Converting the quality variable from one that varies from 1 to 9, to a binary variable(0-1)
 2. Removing highly correlated features
-3. Scaling the data 
+3. Oversampling the data using the SMOTE algorithm to rebalance the dataset
+4. Scaling the data 
 
 # Trying out various classification models 
 
